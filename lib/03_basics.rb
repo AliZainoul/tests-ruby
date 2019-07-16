@@ -19,5 +19,5 @@ def array_42 (array)
 end
 
 def magic_array (array)
-  return array.flatten.sort.map { |a| 2*a }.each { |a| delete a%3 ? 0 }.uniq.sort
+  return array.flatten.sort.map { |a| 2*a }.reject{|x| x % 3 == 0}.uniq.sort
 end
